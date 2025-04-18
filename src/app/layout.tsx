@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import ChillGuy from "@/app/components/ChillGuy";
+import IntroScreen from "@/app/components/IntroScreen";
 
 export const metadata: Metadata = {
   title: "Chill guy's stock briefing",
@@ -17,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
+        <IntroScreen />
         <Header />
         <main className="flex-grow p-4">{children}</main>
         <Footer />

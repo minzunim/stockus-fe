@@ -33,3 +33,31 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome/Safari */
 }
+
+.typing-effect {
+  display: inline-block;
+  overflow: hidden; /* 텍스트가 영역을 넘어가지 않도록 설정 */
+  white-space: nowrap; /* 텍스트를 한 줄로 유지 */
+  border-right: 2px solid black; /* 커서 효과 */
+  animation:
+    typing 4s steps(100, end),
+    blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0; /* 텍스트가 보이지 않음 */
+  }
+  to {
+    width: 100%; /* 텍스트가 모두 보임 */
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: black;
+  }
+}

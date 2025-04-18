@@ -31,7 +31,7 @@ export default function DCSummary() {
             .replace(/Positive/g, "😇");
         // .replace(/-/g, "▪︎");
 
-        console.log('cv', convertText);
+        // typing 효과 
 
         return convertText;
     };
@@ -50,7 +50,7 @@ export default function DCSummary() {
             ) : llmSummary && llmSummary.text && llmSummary.time_stamp ? (
                 <>
                     <div className="text-gray-400">{`(${llmSummary.time_stamp} 업데이트)`}</div>
-                    <div>
+                    <div className="typing-effect">
                         <ReactMarkdown
                             remarkPlugins={[remarkGfm]}
                             rehypePlugins={[rehypeRaw]}
