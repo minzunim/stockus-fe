@@ -1,5 +1,5 @@
 // IntroScreen.jsx (전체 페이지)
-'use client'
+'use client';
 
 import ChillGuy from './ChillGuy';
 import useSound from 'use-sound';
@@ -12,16 +12,16 @@ export default function IntroScreen() {
   });
 
   const startHandler = () => {
-    setStarted(true)
+    setStarted(true);
     //play()
-  }
+  };
 
   return (
     <div
-      className={`absolute z-60 w-screen h-screen ${started ? '' : 'bg-white'}`}
+      className={`absolute z-60 w-full h-full ${started ? '' : 'bg-white'}`}
       onClick={startHandler}>
-      <ChillGuy 
-        started={started} 
+      <ChillGuy
+        started={started}
       />
     </div>
   );

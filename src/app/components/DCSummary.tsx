@@ -41,7 +41,7 @@ export default function DCSummary() {
     }, []);
 
     return (
-        <div className="mt-5">
+        <div className="mt-5 no-scrollbar">
             <h2 className="text-2xl font-bold mb-4">
                 <img src="/icons/dc_icon.webp" alt="" className="inline-block w-6 h-6" />
                 &nbsp;DC Inside Summary</h2>
@@ -49,8 +49,8 @@ export default function DCSummary() {
                 <p>Loading...</p>
             ) : llmSummary && llmSummary.text && llmSummary.time_stamp ? (
                 <>
-                    <div className="text-gray-400">{`(${llmSummary.time_stamp} 업데이트)`}</div>
-                    <div className="typing-effect">
+                    <div className="text-gray-400">{`(${llmSummary.time_stamp} 기준)`}</div>
+                    <div>
                         <ReactMarkdown
                             remarkPlugins={[remarkGfm]}
                             rehypePlugins={[rehypeRaw]}
