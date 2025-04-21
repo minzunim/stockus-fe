@@ -2,7 +2,6 @@
 'use client';
 
 import ChillGuy from './ChillGuy';
-import useSound from 'use-sound';
 import { useState } from 'react';
 
 export default function IntroScreen() {
