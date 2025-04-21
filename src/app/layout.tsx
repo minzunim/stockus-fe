@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
-import ChillGuy from "@/app/components/ChillGuy";
-import IntroScreen from "@/app/components/IntroScreen";
 
 export const metadata: Metadata = {
   title: "Chill guy's stock briefing",

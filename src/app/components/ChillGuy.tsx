@@ -1,7 +1,11 @@
 // ChillGuy.jsx (이미지 전용 컴포넌트)
 import { motion } from 'framer-motion';
 
-export default function ChillGuy({ started }: any) {
+interface ChillGuyProps {
+  started: boolean;
+}
+
+export default function ChillGuy({ started }: ChillGuyProps) {
   return (
     <motion.img
       src="/icons/chill_guy_icon.webp"

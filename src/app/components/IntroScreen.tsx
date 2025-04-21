@@ -3,13 +3,13 @@
 
 import ChillGuy from './ChillGuy';
 import useSound from 'use-sound';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function IntroScreen() {
   const [started, setStarted] = useState(false);
-  const [play, { sound }] = useSound('/sounds/chill-bgm.mp3', {
-    volume: 0.5,
-  });
+  // const [play, { sound }] = useSound('/sounds/chill-bgm.mp3', {
+  //   volume: 0.5,
+  // });
 
   const startHandler = () => {
     setStarted(true);
