@@ -8,14 +8,14 @@ import { DCSummaryItem } from "@/app/model/DCsummary";
 import api from "@/lib/axios";
 import { useEffect, useState } from "react";
 
-export default function DCSummary() {
+export default function RedditSummary() {
 
     const [llmSummary, setLlmSummary] = useState<DCSummaryItem>();
     const [isLoading, setIsLoading] = useState(true);
 
     const getLlmSummary = async () => {
         setIsLoading(true);
-        const { data } = await api.get("/llm_summary?cm=dc");
+        const { data } = await api.get("/llm_summary?cm=rd");
 
         console.log('data', data);
 
@@ -43,8 +43,8 @@ export default function DCSummary() {
     return (
         <div className="mt-5 no-scrollbar">
             <h2 className="text-2xl font-bold mb-4">
-                <img src="/icons/dc_icon.webp" alt="" className="inline-block w-6 h-6" />
-                &nbsp;DC Inside Summary</h2>
+                <img src="/icons/reddit_icon.webp" alt="" className="inline-block w-6 h-6" />
+                &nbsp;Reddit Summary</h2>
             {isLoading ? (
                 <p>Loading...</p>
             ) : llmSummary && llmSummary.text && llmSummary.time_stamp ? (
