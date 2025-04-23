@@ -49,7 +49,7 @@ export default function DCSummary() {
                 <p>Loading...</p>
             ) : llmSummary && llmSummary.text && llmSummary.time_stamp ? (
                 <>
-                    <div className="text-gray-400">{`(${llmSummary.time_stamp} 기준)`}</div>
+                    <div className="text-gray-400 mb-2">{`(${llmSummary.time_stamp} 기준)`}<span style={{ "color": "blue" }}>&nbsp;*매일 밤 10시 업데이트</span></div>
                     <div>
                         <ReactMarkdown
                             remarkPlugins={[remarkGfm]}

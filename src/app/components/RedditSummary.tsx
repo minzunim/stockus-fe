@@ -44,12 +44,12 @@ export default function RedditSummary() {
         <div className="mt-5 no-scrollbar">
             <h2 className="text-2xl font-bold mb-4">
                 <img src="/icons/reddit_icon.webp" alt="" className="inline-block w-6 h-6" />
-                &nbsp;Reddit Summary</h2>
+                &nbsp;Reddit Summary<img src="/icons/refresh_icon.png" className="inline w-5 h-5 ml-3" onClick={getLlmSummary} /></h2>
             {isLoading ? (
                 <p>Loading...</p>
             ) : llmSummary && llmSummary.text && llmSummary.time_stamp ? (
                 <>
-                    <div className="text-gray-400">{`(${llmSummary.time_stamp} 기준)`}</div>
+                    <div className="text-gray-400 mb-2">{`(${llmSummary.time_stamp} 기준)`}</div>
                     <div>
                         <ReactMarkdown
                             remarkPlugins={[remarkGfm]}
