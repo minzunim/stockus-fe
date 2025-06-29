@@ -11,7 +11,7 @@ export default function MarketSummary() {
 
     const getMarketSummary = async () => {
         setIsLoading(true);
-        const { data } = await api.get("/market_summary");
+        const { data } = await api.get("/market/summary");
         setSummary(data.data);
         setIsLoading(false);
     };
