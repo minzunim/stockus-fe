@@ -15,7 +15,7 @@ export default function RedditSummary() {
 
     const getLlmSummary = async () => {
         setIsLoading(true);
-        const { data } = await api.get("/llm_summary?cm=rd");
+        const { data } = await api.get("/llm/summary?cm=rd");
 
         console.log('data', data);
 
@@ -37,7 +37,7 @@ export default function RedditSummary() {
     };
 
     useEffect(() => {
-        getLlmSummary();
+        // getLlmSummary();
     }, []);
 
     return (

@@ -15,7 +15,7 @@ export default function DCSummary() {
 
     const getLlmSummary = async () => {
         setIsLoading(true);
-        const { data } = await api.get("/llm_summary?cm=dc");
+        const { data } = await api.get("/llm/summary?cm=dc");
 
         console.log('data', data);
 
