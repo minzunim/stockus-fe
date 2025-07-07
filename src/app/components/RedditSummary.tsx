@@ -37,7 +37,7 @@ export default function RedditSummary() {
     };
 
     useEffect(() => {
-        // getLlmSummary();
+        getLlmSummary();
     }, []);
 
     return (
