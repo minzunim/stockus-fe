@@ -78,7 +78,7 @@ export default function RedditSummary() {
                     <tbody>
                       {llmSummary?.text.map((stock: any, index: number) => (
                         <tr key={index} className="border-t hover:bg-gray-50">
-                          <td className="py-3 px-3 text-gray-700 font-medium">{stock.ticker}</td>
+                          <td className="py-3 px-3 text-gray-700 font-medium"><a href={`https://m.stock.naver.com/search?q=${stock.ticker}&resultTab=stock%2Cindex%2Cmarketindicator%2Ccoin%2Cipo`}>{stock.ticker}</a></td>
                           <td className="py-3 px-3 text-gray-600 text-sm">{stock.summary}</td>
                           <td className="py-3 px-3 text-center">
                             <span
