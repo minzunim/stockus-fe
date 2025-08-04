@@ -35,15 +35,15 @@ export default function MarketSummary() {
 
     return (
         <div>
-            <h2 className="text-2xl font-bold mb-4">📈 Market Summary</h2>
+            <h2 className="text-xl font-bold mb-4"><span className="text-sm">📈</span> 미국 3대 지수 현황</h2>
             <div className="overflow-x-auto whitespace-nowrap hide-scrollbar">
                 {isLoading ? (
                     <div>Loading...</div>
                 ) : summary.length > 0 ? (
-                    summary.map((item: MarketSummaryItem) => (
+                    summary.map((item: MarketSummaryItem, index:number) => (
                         <div
-                            key={item.ticker}
-                            className="inline-block w-[100px] mr-4 p-2 rounded-sm border border-gray-300 text-center">
+                            key={index}
+                            className="inline-block w-[100px] mr-2 p-2 rounded-sm border border-gray-300 text-center">
                             <div className="font-bold">{convertTicker(item.ticker)}</div>
                             <div>{(item.cur_close).toFixed(2)}
                                 <div>
